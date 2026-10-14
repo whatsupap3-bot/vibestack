@@ -1,0 +1,41 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>VibeStack – AI tools for vibe coders</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,sans-serif;background:#0b0d12;color:#e6e8ee}
+a{color:#8ab4ff}.wrap{max-width:1150px;margin:auto;padding:0 20px}
+header{padding:70px 0 40px;text-align:center;background:radial-gradient(circle at 50% 0,#2a1f5c,transparent 60%)}
+.logo{font-weight:800;letter-spacing:.5px;color:#b69cff}h1{font-size:clamp(28px,5vw,52px);margin:12px 0;line-height:1.1}
+.sub{color:#9aa3b2}#q{width:100%;max-width:520px;margin-top:24px;padding:14px 18px;border-radius:12px;border:1px solid #2a2f3b;background:#141821;color:#fff;font-size:16px}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin:24px 0}.tabs button{background:#141821;border:1px solid #2a2f3b;color:#cfd5e1;padding:8px 14px;border-radius:999px;cursor:pointer}
+.tabs button.on{background:#7c5cff;border-color:#7c5cff;color:#fff}
+h2{margin:32px 0 12px;font-size:20px}.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px}
+.card{background:#141821;border:1px solid #232835;border-radius:14px;padding:16px;display:flex;flex-direction:column;gap:8px;transition:.15s}
+.card:hover{border-color:#7c5cff;transform:translateY(-2px)}.top{display:flex;justify-content:space-between;align-items:center}
+.rank{font-weight:800;color:#b69cff}.name{font-weight:600;font-size:17px;color:#fff;text-decoration:none}.best{color:#9aa3b2;font-size:14px;flex:1}
+.pill{font-size:12px;padding:3px 9px;border-radius:999px;background:#1f2533;color:#cfd5e1;align-self:flex-start}
+.Free{background:#11331f;color:#6ee7a1}.Freemium{background:#1d2a45;color:#8ab4ff}.Paid{background:#3a2516;color:#ffb774}
+.ex{font-size:11px;color:#ffb774;border:1px solid #ffb774;border-radius:6px;padding:1px 6px}
+.news{margin:50px 0;padding:30px;border-radius:16px;background:linear-gradient(135deg,#1b1640,#141821);text-align:center}
+.news form{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:14px}.news input{padding:12px;border-radius:10px;border:1px solid #2a2f3b;background:#0b0d12;color:#fff;min-width:260px}
+.news button{padding:12px 20px;border:0;border-radius:10px;background:#7c5cff;color:#fff;font-weight:600}
+footer{color:#6b7385;text-align:center;padding:30px;font-size:13px}
+</style></head><body>
+<header><div class="wrap"><div class="logo">◆ VibeStack</div><h1>The AI tools vibe coders actually use, ranked by use case.</h1><p class="sub">A curated directory for builders shipping with AI.</p><input id="q" placeholder="Search tools, e.g. 'postgres' or 'agent'…"></div></header>
+<main class="wrap"><div class="tabs" id="tabs"></div><div id="list"></div>
+<h2>🚀 New releases</h2><div class="grid" id="rel"></div>
+<section class="news"><h2 style="margin:0">Get the weekly VibeStack drop</h2><p class="sub">New tools, ranked. No spam. (Placeholder: signup not yet active.)</p>
+<form onsubmit="event.preventDefault();this.querySelector('button').textContent='Coming soon ✓'"><input type="email" placeholder="you@example.com" required><button>Subscribe</button></form></section></main>
+<footer>VibeStack (working name) · Pricing models are general; check each site for current plans.</footer>
+<script src="tools.js"></script><script>
+let cat="all";const $=id=>document.getElementById(id);
+$("tabs").innerHTML=[["all","All"],...CATEGORIES].map(([k,v])=>`<button data-k="${k}" class="${k==cat?'on':''}">${v}</button>`).join("");
+$("tabs").onclick=e=>{if(!e.target.dataset.k)return;cat=e.target.dataset.k;[...$("tabs").children].forEach(b=>b.classList.toggle("on",b.dataset.k==cat));render()};
+$("q").oninput=render;
+function render(){const q=$("q").value.toLowerCase();let h="";
+for(const [k,v] of CATEGORIES){if(cat!="all"&&cat!=k)continue;
+const ts=TOOLS.filter(t=>t.category==k&&(t.name+" "+t.best).toLowerCase().includes(q)).sort((a,b)=>a.rank-b.rank);if(!ts.length)continue;
+h+=`<h2>${v}</h2><div class="grid">`+ts.map(t=>`<div class="card"><div class="top"><a class="name" href="${t.url}" target="_blank" rel="noopener">${t.name}</a><span class="rank">#${t.rank}</span></div><div class="best">Best for: ${t.best}</div><span class="pill ${t.pricing.replace(' ','')}">${t.pricing}</span></div>`).join("")+"</div>"}
+$("list").innerHTML=h||'<p class="sub">No tools match.</p>'}
+render();
+$("rel").innerHTML=RELEASES.map(r=>`<div class="card"><div class="top"><span class="name">${r.title}</span>${r.example?'<span class="ex">Example data</span>':''}</div><div class="best">${r.date}</div><a href="${r.source}">Source</a></div>`).join("");
+</script></body></html>

@@ -1,0 +1,378 @@
+{
+ "categories": [
+  [
+   "agents",
+   "AI coding agents & IDEs"
+  ],
+  [
+   "builders",
+   "App builders (prompt-to-app)"
+  ],
+  [
+   "design",
+   "Design-to-code & UI"
+  ],
+  [
+   "backend",
+   "Backend & databases"
+  ],
+  [
+   "deploy",
+   "Deploy & hosting"
+  ],
+  [
+   "llm",
+   "LLM APIs & models"
+  ],
+  [
+   "frameworks",
+   "Agent frameworks"
+  ],
+  [
+   "testing",
+   "Testing, debugging & security"
+  ]
+ ],
+ "tools": [
+  {
+   "name": "Cursor",
+   "url": "https://cursor.com",
+   "category": "agents",
+   "best": "AI-first code editor with agent mode",
+   "pricing": "Freemium",
+   "rank": 1
+  },
+  {
+   "name": "Claude Code",
+   "url": "https://www.anthropic.com/claude-code",
+   "category": "agents",
+   "best": "Terminal-based agentic coding",
+   "pricing": "Paid",
+   "rank": 2
+  },
+  {
+   "name": "GitHub Copilot",
+   "url": "https://github.com/features/copilot",
+   "category": "agents",
+   "best": "In-editor completions across IDEs",
+   "pricing": "Freemium",
+   "rank": 3
+  },
+  {
+   "name": "Windsurf",
+   "url": "https://windsurf.com",
+   "category": "agents",
+   "best": "Agentic IDE with Cascade flows",
+   "pricing": "Freemium",
+   "rank": 4
+  },
+  {
+   "name": "Cline",
+   "url": "https://cline.bot",
+   "category": "agents",
+   "best": "Open-source VS Code coding agent",
+   "pricing": "Free",
+   "rank": 5
+  },
+  {
+   "name": "Aider",
+   "url": "https://aider.chat",
+   "category": "agents",
+   "best": "Git-aware pair programming in the terminal",
+   "pricing": "Free",
+   "rank": 6
+  },
+  {
+   "name": "Lovable",
+   "url": "https://lovable.dev",
+   "category": "builders",
+   "best": "Full-stack web apps from a prompt",
+   "pricing": "Freemium",
+   "rank": 1
+  },
+  {
+   "name": "Bolt.new",
+   "url": "https://bolt.new",
+   "category": "builders",
+   "best": "In-browser prompt-to-app with instant preview",
+   "pricing": "Freemium",
+   "rank": 2
+  },
+  {
+   "name": "Replit",
+   "url": "https://replit.com",
+   "category": "builders",
+   "best": "Build and host apps with Replit Agent",
+   "pricing": "Freemium",
+   "rank": 3
+  },
+  {
+   "name": "Base44",
+   "url": "https://base44.com",
+   "category": "builders",
+   "best": "No-code apps with built-in backend",
+   "pricing": "See site",
+   "rank": 4
+  },
+  {
+   "name": "Create.xyz",
+   "url": "https://www.create.xyz",
+   "category": "builders",
+   "best": "Prompt-to-app for non-developers",
+   "pricing": "See site",
+   "rank": 5
+  },
+  {
+   "name": "v0",
+   "url": "https://v0.dev",
+   "category": "design",
+   "best": "React/Tailwind UI from prompts",
+   "pricing": "Freemium",
+   "rank": 1
+  },
+  {
+   "name": "Figma",
+   "url": "https://www.figma.com",
+   "category": "design",
+   "best": "Design and Dev Mode handoff",
+   "pricing": "Freemium",
+   "rank": 2
+  },
+  {
+   "name": "Builder.io",
+   "url": "https://www.builder.io",
+   "category": "design",
+   "best": "Figma designs to production code",
+   "pricing": "Freemium",
+   "rank": 3
+  },
+  {
+   "name": "Locofy",
+   "url": "https://www.locofy.ai",
+   "category": "design",
+   "best": "Design files to frontend code",
+   "pricing": "See site",
+   "rank": 4
+  },
+  {
+   "name": "shadcn/ui",
+   "url": "https://ui.shadcn.com",
+   "category": "design",
+   "best": "Copy-paste components AI tools love",
+   "pricing": "Free",
+   "rank": 5
+  },
+  {
+   "name": "Supabase",
+   "url": "https://supabase.com",
+   "category": "backend",
+   "best": "Postgres, auth and storage in one",
+   "pricing": "Freemium",
+   "rank": 1
+  },
+  {
+   "name": "Firebase",
+   "url": "https://firebase.google.com",
+   "category": "backend",
+   "best": "Google's realtime backend for apps",
+   "pricing": "Freemium",
+   "rank": 2
+  },
+  {
+   "name": "Convex",
+   "url": "https://www.convex.dev",
+   "category": "backend",
+   "best": "Reactive TypeScript backend",
+   "pricing": "Freemium",
+   "rank": 3
+  },
+  {
+   "name": "Neon",
+   "url": "https://neon.tech",
+   "category": "backend",
+   "best": "Serverless Postgres with branching",
+   "pricing": "Freemium",
+   "rank": 4
+  },
+  {
+   "name": "Clerk",
+   "url": "https://clerk.com",
+   "category": "backend",
+   "best": "Drop-in authentication",
+   "pricing": "Freemium",
+   "rank": 5
+  },
+  {
+   "name": "Vercel",
+   "url": "https://vercel.com",
+   "category": "deploy",
+   "best": "Frontend and Next.js deployment",
+   "pricing": "Freemium",
+   "rank": 1
+  },
+  {
+   "name": "Netlify",
+   "url": "https://www.netlify.com",
+   "category": "deploy",
+   "best": "Static sites and Jamstack hosting",
+   "pricing": "Freemium",
+   "rank": 2
+  },
+  {
+   "name": "Cloudflare Pages",
+   "url": "https://pages.cloudflare.com",
+   "category": "deploy",
+   "best": "Edge hosting with Workers",
+   "pricing": "Freemium",
+   "rank": 3
+  },
+  {
+   "name": "Railway",
+   "url": "https://railway.com",
+   "category": "deploy",
+   "best": "One-click backend and DB deploys",
+   "pricing": "See site",
+   "rank": 4
+  },
+  {
+   "name": "Render",
+   "url": "https://render.com",
+   "category": "deploy",
+   "best": "Heroku-style managed services",
+   "pricing": "Freemium",
+   "rank": 5
+  },
+  {
+   "name": "OpenAI API",
+   "url": "https://platform.openai.com",
+   "category": "llm",
+   "best": "GPT models for general apps",
+   "pricing": "Paid",
+   "rank": 1
+  },
+  {
+   "name": "Anthropic API",
+   "url": "https://www.anthropic.com/api",
+   "category": "llm",
+   "best": "Claude models for coding and reasoning",
+   "pricing": "Paid",
+   "rank": 2
+  },
+  {
+   "name": "Google Gemini API",
+   "url": "https://ai.google.dev",
+   "category": "llm",
+   "best": "Long-context multimodal models",
+   "pricing": "Freemium",
+   "rank": 3
+  },
+  {
+   "name": "OpenRouter",
+   "url": "https://openrouter.ai",
+   "category": "llm",
+   "best": "One API for many models",
+   "pricing": "See site",
+   "rank": 4
+  },
+  {
+   "name": "Groq",
+   "url": "https://groq.com",
+   "category": "llm",
+   "best": "Very fast inference for open models",
+   "pricing": "Freemium",
+   "rank": 5
+  },
+  {
+   "name": "LangChain",
+   "url": "https://www.langchain.com",
+   "category": "frameworks",
+   "best": "Composable LLM chains and LangGraph",
+   "pricing": "Free",
+   "rank": 1
+  },
+  {
+   "name": "CrewAI",
+   "url": "https://www.crewai.com",
+   "category": "frameworks",
+   "best": "Role-based multi-agent crews",
+   "pricing": "Freemium",
+   "rank": 2
+  },
+  {
+   "name": "LlamaIndex",
+   "url": "https://www.llamaindex.ai",
+   "category": "frameworks",
+   "best": "RAG over your data",
+   "pricing": "Freemium",
+   "rank": 3
+  },
+  {
+   "name": "Vercel AI SDK",
+   "url": "https://ai-sdk.dev",
+   "category": "frameworks",
+   "best": "TypeScript toolkit for AI apps",
+   "pricing": "Free",
+   "rank": 4
+  },
+  {
+   "name": "AutoGen",
+   "url": "https://github.com/microsoft/autogen",
+   "category": "frameworks",
+   "best": "Microsoft multi-agent framework",
+   "pricing": "Free",
+   "rank": 5
+  },
+  {
+   "name": "Sentry",
+   "url": "https://sentry.io",
+   "category": "testing",
+   "best": "Error tracking and performance",
+   "pricing": "Freemium",
+   "rank": 1
+  },
+  {
+   "name": "Playwright",
+   "url": "https://playwright.dev",
+   "category": "testing",
+   "best": "Reliable end-to-end browser tests",
+   "pricing": "Free",
+   "rank": 2
+  },
+  {
+   "name": "Snyk",
+   "url": "https://snyk.io",
+   "category": "testing",
+   "best": "Dependency and code security scanning",
+   "pricing": "Freemium",
+   "rank": 3
+  },
+  {
+   "name": "CodeRabbit",
+   "url": "https://www.coderabbit.ai",
+   "category": "testing",
+   "best": "AI code review on pull requests",
+   "pricing": "Freemium",
+   "rank": 4
+  }
+ ],
+ "releases": [
+  {
+   "title": "Example release 1",
+   "date": "YYYY-MM-DD",
+   "source": "#",
+   "example": true
+  },
+  {
+   "title": "Example release 2",
+   "date": "YYYY-MM-DD",
+   "source": "#",
+   "example": true
+  },
+  {
+   "title": "Example release 3",
+   "date": "YYYY-MM-DD",
+   "source": "#",
+   "example": true
+  }
+ ]
+}
